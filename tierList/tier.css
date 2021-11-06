@@ -1,0 +1,278 @@
+/*SECTION FÖR TIER LIST*/
+.section-tier {
+    height: 2300px;
+}
+
+/*container bakgrund, storlek och dess position*/
+.container-tier {
+    background: var(--bluedark);
+    max-width: 900px;
+    margin: auto;
+    height: auto;
+    border-radius: 4px;
+    padding: 40px;
+    row-gap: 40px;
+    column-gap: 25px;
+}
+
+
+/*Gör listorna och tier list rubriken brevid varandra, samt mycket utrymme som möjligt*/
+.tier {
+    display: flex;
+    width: 100%;
+    min-height: 70px;
+    background: #272937;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 20px;
+    margin-bottom: 70px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+/*Rubriken för "genshin impact tier list"*/
+.tier .tier-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    min-width: 70px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/*olika färger för tier list. Exempel, SS+ tier ska vara röd*/
+.tier .sss {
+    background: #ef5350;
+}
+
+.tier .ss {
+    background: #ff7f7f;
+}
+
+.tier .s {
+    background: #ffbf7f;
+}
+
+.tier .a {
+    background: #ffff7f;
+}
+
+.tier .b {
+    background: #bfff7f;
+}
+
+.tier .c {
+    background: #7fff7f;
+}
+
+/*tier listor ska vara brevid varandra med flex*/
+.tier .tier-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+/*namn och rollen ska vara under character och lik jämn*/
+.tier .tier-list .character-portrait {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 14%;
+    padding: 10px;
+}
+
+/*Characters storlek och dess bakgrund*/
+.tier .tier-list .character-portrait .character-icon {
+    width: 65px;
+    height: 65px;
+    background: #36384a;
+    border-radius: 6px;
+}
+
+/*Characters element symbols position som ska vara uppe till höger om bilden*/
+.tier .tier-list .character-portrait .character-type {
+    position: absolute;
+    top: 7%;
+    right: 15%;
+    background: #36384a;
+    border-radius: 60px;
+    padding: 2px;
+}
+
+/*Characters constelletion (som C1, C6), position som ska vara nere till vänster om bilden*/
+.tier .tier-list .character-portrait .character-constellation {
+    position: absolute;
+    background: #222431;
+    color: #a7b1c1;
+    font-weight: 600;
+    font-size: 15px;
+    top: 60px;
+    left: 20px;
+    border-radius: 6px;
+}
+
+/*namnet av character*/
+.tier .tier-list .character-portrait .character-name {
+    color: var(--white);
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    margin: 7px 0 0;
+}
+
+/*rollen för character*/
+.tier .tier-list .character-portrait .character-role {
+    color: #a7b1c1;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    margin: 3px 0 0;
+}
+
+/*SECTION FÖR TIER LIST SLUT*/
+
+
+@media (max-width:900px) {
+
+    /*avgöra höjden automatiskt*/
+    .section-tier {
+        height: auto;
+    }
+
+    /*bakgrunden av tier list ska minskas bredden*/
+    .container-tier {
+        max-width: 700px;
+        height: auto;
+    }
+
+    /*omvandlar från flex till grid till characters*/
+    .tier {
+        display: grid;
+        grid-auto-rows: auto;
+        row-gap: 20px;
+        width: 100%;
+    }
+
+    /*ligger till en så mycket utrymme samt höjden av titeln som SS+, S+, S, A etc..*/
+    .tier .tier-title {
+        height: 70px;
+        width: 100%;
+    }
+
+    /*Miskar bilden av charaters*/
+    .tier .tier-list .character-portrait .character-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    /*Justerar characters element på sin rätta position*/
+    .tier .tier-list .character-portrait .character-type {
+        top: 7%;
+        right: 8%;
+    }
+
+    /*Justerar characters constelletion (Exemepl, C1, C6) på sin rätta position*/
+    .tier .tier-list .character-portrait .character-constellation {
+        font-size: 14px;
+        top: 55px;
+        left: 12%;
+    }
+
+    /*Miskar characters namn*/
+    .tier .tier-list .character-portrait .character-name {
+        font-size: 13px;
+    }
+
+    /*minskar charaters roll*/
+    .tier .tier-list .character-portrait .character-role {
+        font-size: 12px;
+    }
+}
+
+/*Mobil versionen*/
+@media (max-width:578px) {
+    .container-tier {
+        max-width: 400px;
+        height: auto;
+    }
+
+    /*Nämner characters namn för grids position*/
+    .tier .tier-list .character-portrait .num1 {
+        grid-area: character1;
+    }
+
+    .tier .tier-list .character-portrait .num2 {
+        grid-area: character2;
+    }
+
+    .tier .tier-list .character-portrait .num3 {
+        grid-area: character3;
+    }
+
+    .tier .tier-list .character-portrait .num4 {
+        grid-area: character4;
+    }
+
+    .tier .tier-list .character-portrait .num5 {
+        grid-area: character;
+    }
+
+    .tier .tier-list .character-portrait .num6 {
+        grid-area: character;
+    }
+
+    /*Använder namnet till att "berätta" koden vilken ordning ska det vara*/
+    .tier .tier-list {
+        display: grid;
+        position: relative;
+        top: 0;
+        left: 9%;
+        /*Berättar till koden det ska vara max 3 rader*/
+        grid-template-areas:
+            "character1 character2 character3"
+            "character4 character5 character6";
+    }
+
+    .tier .tier-list .character-portrait .character-type {
+        top: 0;
+        left: 100%;
+    }
+
+    .tier .tier-list .character-portrait .character-constellation {
+        top: 60px;
+        left: 100%;
+    }
+
+    .tier .tier-list .character-portrait .character-name {
+        font-size: 13px;
+        width: 50px;
+    }
+
+    .tier .tier-list .character-portrait .character-role {
+        font-size: 12px;
+        width: 50px;
+    }
+}
+
+
+@media (max-width:340px) {
+    .tier .tier-list {
+        position: inherit;
+    }
+}
+
+/*Ännu mindre för mobil versionen*/
+@media (max-width:400px) {
+    .tier .tier-list {
+        justify-items: center;
+        left: 0;
+        grid-template-areas:
+            "character1 character2"
+            "character3 character4";
+    }
+}

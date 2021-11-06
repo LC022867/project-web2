@@ -1,0 +1,114 @@
+/*Skorllar smooth*/
+html {
+    scroll-behavior: smooth;
+}
+
+/*Section höjd ska vara automatiskt*/
+.sec-tier {
+    height: auto;
+}
+
+/*containers bakgrund och position*/
+.container-team {
+    background: var(--bluedark);
+    max-width: 100%;
+    margin: auto;
+    height: auto;
+    border-radius: 4px;
+    padding: 30px;
+    row-gap: 40px;
+    column-gap: 25px;
+}
+
+/*Bakgrund av olika alternativ som (Main DPS, SUB DPS och UTILITY)*/
+.container-team .filter-list {
+    width: 80%;
+    height: 90px;
+    background: var(--dark);
+    margin: auto;
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+    padding: 30px;
+    border-radius: 6px;
+}
+
+/*Länkarna ska ha så mycket utrymme som möjligt till MAIN DPS, SUB och UTILITY*/
+.container-team .filter-list .list a {
+    width: 100%;
+    height: 100%;
+    color: var(--white);
+}
+
+/*Container till de olika rule texterna*/
+.content-teams {
+    width: 80%;
+    margin-top: 7%;
+    display: grid;
+    gap: 40px;
+    margin: 20px auto;
+    padding: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    background: var(--bluedark);
+}
+
+/*håller avstånd mellan rubrik och texten*/
+.content-teams .rule h2 {
+    padding-bottom: 25px;
+    color: var(--white);
+}
+
+/*Texterna*/
+.content-teams .rule p {
+    line-height: 1.8em;
+    font-weight: 500;
+    font-size: 16px;
+    color: #a7b1c1;
+}
+
+/*något viktigt ord där det blir tjockare*/
+.content .rule span {
+    font-weight: 600;
+}
+
+/*Bakgrund av de olika roller (till exempel om MAIN DPS) */
+.content-tier {
+    width: 75%;
+    margin-top: 7%;
+    margin: 30px auto 10px;
+    padding: 30px;
+    background: var(--bluedark);
+}
+
+.content-tier .genshin-role h3 {
+    color: var(--white);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.content-tier .genshin-role p {
+    color: #a7b1c1;
+    padding: 0 10%;
+    line-height: 1.6em;
+}
+
+/*Mobil versionen*/
+@media (max-width:688px) {
+
+    /*Ändrar griden till 1fr*/
+    .content-teams {
+        margin-top: 7%;
+        gap: 40px;
+        margin: 20px auto;
+        padding: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    /*gör grid row*/
+    .container-team .filter-list {
+        height: auto;
+        grid-auto-flow: row;
+        row-gap: 50px;
+        font-size: 14px;
+    }
+}

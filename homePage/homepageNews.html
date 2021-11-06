@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homepage News</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo"> <img src="https://rerollcdn.com/GENSHIN/UI/genshin-logo.svg" alt="">
+                GenshinNews.gg
+            </label>
+            <ul>
+                <li><a class="active home" href="#">Home</a></li>
+                <li><a class="teams" href="../teams/teams.html">Teams</a></li>
+                <li><a class="tier_list" href="../tierList/tier_list.html">Tier list</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="main-text">
+            <h1>Genshin impact News</h1>
+        </div>
+        <div class="container">
+            <div class="textNews coloum-2">
+                <h3>The "Aloy's Exploration Journal" Web Event has begun</h3>
+                <h5>Date Posted Oct 13, 2021</h5>
+                <p>Aloy's Exploration Journal
+                    When Aloy sets foot on Teyvat, what kind of adventure will this Savior from Another World
+                    experience?
+                    Dear Traveler, please open "Aloy's Exploration Journal" to start the adventure!</p>
+                <a href="https://genshin.mihoyo.com/en/news/detail/16485"><button>Take Part in Event!</button></a>
+            </div>
+            <div class="picNews coloum-1">
+                <img src="./bilder/genshin_2.2.jpg" alt="">
+            </div>
+            <div class="picNews video coloum-3">
+                <img id="myBtn" src="./bilder/genshin_01.webp" alt="">
+                <i class="fas fa-play" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+            </div>
+            <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <iframe src="https://www.youtube.com/embed/1ks8Lnnij0M" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="textNews coloum-4">
+                <h3>Genshin Impact EP - He Who Wanders Untrammeled</h3>
+                <h5>Date Posted Oct 13, 2021</h5>
+                <p>As he wandered through the streets and alleyways lined by cherry blossom trees, a rare and pensive
+                    thought came to the young martial artist's mind.
+                    The answer he seeks lies in both the fierce momentum of battles and the journey awaiting him.</p>
+                <a href="https://genshin.mihoyo.com/en/news/detail/16458"><button>More information!</button></a>
+            </div>
+            <div class="textNews coloum-6">
+                <h3>"Into the Perilous Labyrinth of Fog" Version 2.2 Update Details</h3>
+                <h5>Date Posted Oct 13, 2021</h5>
+                <p>Dear Travelers,
+                    Below are the details of the Version 2.2 update "Into the Perilous Labyrinth of Fog" and the update
+                    compensation.</p>
+                <a href="https://genshin.mihoyo.com/en/news/detail/16488"><button>More information!</button></a>
+            </div>
+            <div class="picNews coloum-5">
+                <img src="./bilder/genshin_02.webp" alt="">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="copyright">
+            <p class="from">GenshinNews.gg</p>
+            <p>Copyright © 2020 MrBottles All Rights Reserved</p>
+        </div>
+        <div class="line1"></div>
+        <div class="icons">
+            <a class="icon" href="https://www.facebook.com/Genshinimpact/"><i class="fab fa-facebook"></i></a>
+            <a class="icon" href="https://twitter.com/genshinimpact"><i class="fab fa-twitter"></i></a>
+            <a class="icon" href="https://www.youtube.com/c/GenshinImpact"><i class="fab fa-youtube"></i></a>
+            <a class="icon" href="https://discord.com/invite/genshinimpacttavern"><i class="fab fa-discord"></i></a>
+        </div>
+        <div class="line2"></div>
+        <div class="privacy">
+            <p>Privacy Policy | News | Contact Us</p>
+        </div>
+    </footer>
+    <script src="video.js"></script>
+</body>
+</html>
